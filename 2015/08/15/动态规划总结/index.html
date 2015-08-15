@@ -3,18 +3,66 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我是要成为海贼王的男人 | Hexo</title>
+  <title>动态规划总结 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
+  <meta name="description" content="题目名称
+题目描述
+解题思路
+
+
+
+
+House Robber
+求子数组和的最大值,子数组元素在原数组中要求不连续
+res[i] = max(nums[i] + res[i-2], res[i-1])
+
+
+
+
+House Robber II
+数组变成循环数组
+基本思路不变，就是要对第一个元素和最后一个元素做特殊处理。result = max(rob(nums[1:]), rob(nums[:-1]">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我是要成为海贼王的男人">
-<meta property="og:url" content="http://yoursite.com/2015/08/14/我是要成为海贼王的男人/index.html">
+<meta property="og:title" content="动态规划总结">
+<meta property="og:url" content="http://yoursite.com/2015/08/15/动态规划总结/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description">
-<meta property="og:updated_time" content="2015-08-14T12:16:52.000Z">
+<meta property="og:description" content="题目名称
+题目描述
+解题思路
+
+
+
+
+House Robber
+求子数组和的最大值,子数组元素在原数组中要求不连续
+res[i] = max(nums[i] + res[i-2], res[i-1])
+
+
+
+
+House Robber II
+数组变成循环数组
+基本思路不变，就是要对第一个元素和最后一个元素做特殊处理。result = max(rob(nums[1:]), rob(nums[:-1]">
+<meta property="og:updated_time" content="2015-08-15T14:32:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我是要成为海贼王的男人">
-<meta name="twitter:description">
+<meta name="twitter:title" content="动态规划总结">
+<meta name="twitter:description" content="题目名称
+题目描述
+解题思路
+
+
+
+
+House Robber
+求子数组和的最大值,子数组元素在原数组中要求不连续
+res[i] = max(nums[i] + res[i-2], res[i-1])
+
+
+
+
+House Robber II
+数组变成循环数组
+基本思路不变，就是要对第一个元素和最后一个元素做特殊处理。result = max(rob(nums[1:]), rob(nums[:-1]">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,10 +108,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-我是要成为海贼王的男人" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-动态规划总结" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/08/14/我是要成为海贼王的男人/" class="article-date">
-  <time datetime="2015-08-14T12:16:52.000Z" itemprop="datePublished">2015-08-14</time>
+    <a href="/2015/08/15/动态规划总结/" class="article-date">
+  <time datetime="2015-08-15T03:42:43.000Z" itemprop="datePublished">2015-08-15</time>
 </a>
     
   </div>
@@ -74,7 +122,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      我是要成为海贼王的男人
+      动态规划总结
     </h1>
   
 
@@ -82,11 +130,46 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <table>
+<thead>
+<tr>
+<th>题目名称</th>
+<th>题目描述</th>
+<th>解题思路</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://leetcode.com/problems/house-robber/" target="_blank" rel="external">House Robber</a></td>
+<td>求子数组和的最大值,子数组元素在原数组中要求不连续</td>
+<td>res[i] = max(nums[i] + res[i-2], res[i-1])</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.com/problems/house-robber-ii/" target="_blank" rel="external">House Robber II</a></td>
+<td>数组变成循环数组</td>
+<td>基本思路不变，就是要对第一个元素和最后一个元素做特殊处理。result = max(rob(nums[1:]), rob(nums[:-1])</td>
+</tr>
+<tr>
+<td><a href="https://leetcode.com/problems/triangle/" target="_blank" rel="external">Triangle</a></td>
+<td>类似于树的从顶部到底部的最小path</td>
+<td>很明显的动态规划。注意考虑的地方是可以从下网上遍历而仅仅是从上往下。</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.com/problems/interleaving-string/" target="_blank" rel="external">Interleaving String</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/08/14/我是要成为海贼王的男人/" data-id="cidbnfkuw00010076r1n61smo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/08/15/动态规划总结/" data-id="cidd5ydbr0002s276vusoj5yl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -95,19 +178,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/08/14/我是要成为海贼王的男人-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          我是要成为海贼王的男人
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/08/14/first-post/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/08/14/我是要成为海贼王的男人-1/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">first post</div>
+      <div class="article-nav-title">我是要成为海贼王的男人</div>
     </a>
   
 </nav>
@@ -141,15 +215,15 @@
       <ul>
         
           <li>
+            <a href="/2015/08/15/动态规划总结/">动态规划总结</a>
+          </li>
+        
+          <li>
             <a href="/2015/08/14/我是要成为海贼王的男人-1/">我是要成为海贼王的男人</a>
           </li>
         
           <li>
-            <a href="/2015/08/14/我是要成为海贼王的男人/">我是要成为海贼王的男人</a>
-          </li>
-        
-          <li>
-            <a href="/2015/08/14/first-post/">first post</a>
+            <a href="/2015/08/14/first-post/">Tree 算法题总结</a>
           </li>
         
           <li>

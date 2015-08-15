@@ -61,6 +61,77 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-动态规划总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/08/15/动态规划总结/" class="article-date">
+  <time datetime="2015-08-15T03:42:43.000Z" itemprop="datePublished">2015-08-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/15/动态规划总结/">动态规划总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <table>
+<thead>
+<tr>
+<th>题目名称</th>
+<th>题目描述</th>
+<th>解题思路</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://leetcode.com/problems/house-robber/" target="_blank" rel="external">House Robber</a></td>
+<td>求子数组和的最大值,子数组元素在原数组中要求不连续</td>
+<td>res[i] = max(nums[i] + res[i-2], res[i-1])</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.com/problems/house-robber-ii/" target="_blank" rel="external">House Robber II</a></td>
+<td>数组变成循环数组</td>
+<td>基本思路不变，就是要对第一个元素和最后一个元素做特殊处理。result = max(rob(nums[1:]), rob(nums[:-1])</td>
+</tr>
+<tr>
+<td><a href="https://leetcode.com/problems/triangle/" target="_blank" rel="external">Triangle</a></td>
+<td>类似于树的从顶部到底部的最小path</td>
+<td>很明显的动态规划。注意考虑的地方是可以从下网上遍历而仅仅是从上往下。</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://leetcode.com/problems/interleaving-string/" target="_blank" rel="external">Interleaving String</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/08/15/动态规划总结/" data-id="cidd5ydbr0002s276vusoj5yl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-我是要成为海贼王的男人-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/08/14/我是要成为海贼王的男人-1/" class="article-date">
@@ -87,43 +158,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/08/14/我是要成为海贼王的男人-1/" data-id="cidbnfkv600020076elygm2k6" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-我是要成为海贼王的男人" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/08/14/我是要成为海贼王的男人/" class="article-date">
-  <time datetime="2015-08-14T12:16:52.000Z" itemprop="datePublished">2015-08-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/14/我是要成为海贼王的男人/">我是要成为海贼王的男人</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/08/14/我是要成为海贼王的男人/" data-id="cidbnfkuw00010076r1n61smo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/08/14/我是要成为海贼王的男人-1/" data-id="cidd5ydbk0001s276ig9nxcsw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -147,7 +182,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/14/first-post/">first post</a>
+      <a class="article-title" href="/2015/08/14/first-post/">Tree 算法题总结</a>
     </h1>
   
 
@@ -155,11 +190,57 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="Tree算法题总结">Tree算法题总结</h1><h2 id="Tree的性质">Tree的性质</h2><p>Tree本身的数据结构决定我们在遍历树的过程中接触的只有当前节点和当前节点的子树。换句话说，我们处于一个local unit中。而我们要做的就是写好这个local unit，并将计算结果传递出来，逐步计算整棵树的性质。</p>
+<p>解决这种类型的题目的本质在于，计算local unit性质，以此为信息，计算更大一个unit的性质，逐步扩大到全局。又因为在每一个local unit，对我们可见的只有当前node,左子树，右子树。所以信息的整合方式为，根据左右子树的信息，计算这个local unit的性质。</p>
+<p>例题</p>
+<ul>
+<li><p>Maximum Depth of Binary Tree</p>
+<ul>
+<li>[题目描述] The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.</li>
+<li><p>[关键代码] </p>
+  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxDepth</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(root==<span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> max(maxDepth(root-&gt;left),maxDepth(root-&gt;right)) + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Minimum Depth of Binary Tree</p>
+</li>
+<li>Balanced Binary Tree</li>
+<li>Same Tree</li>
+<li>Symmetric Tree</li>
+</ul>
+<p>这些问题的解决思路都一样。</p>
+<h2 id="树的变量计算篇">树的变量计算篇</h2><p>生成一个变量。无非就是从上到下遍历，或者是从下往上遍历，逐步更新变量的值。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">题目</th>
+<th style="text-align:center">题目描述</th>
+<th style="text-align:center">解题思路</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Path Sum</td>
+<td style="text-align:center">判断树中是否有一条自顶向下的路径等于sum</td>
+<td style="text-align:center">建立一个variable,currPathSum, 然后从root开始传递下去就好了</td>
+</tr>
+<tr>
+<td style="text-align:center">col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:center">$12</td>
+</tr>
+<tr>
+<td style="text-align:center">zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:center">$1</td>
+</tr>
+</tbody>
+</table>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/08/14/first-post/" data-id="cidbnfku400000076w9kmkc24" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/08/14/first-post/" data-id="cidd5ydao0000s276i0kou4lw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -204,7 +285,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/08/14/hello-world/" data-id="cidbnfkv700030076z5u8oopf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/08/14/hello-world/" data-id="cidd5ydbt0003s2764r807e4z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -241,15 +322,15 @@
       <ul>
         
           <li>
+            <a href="/2015/08/15/动态规划总结/">动态规划总结</a>
+          </li>
+        
+          <li>
             <a href="/2015/08/14/我是要成为海贼王的男人-1/">我是要成为海贼王的男人</a>
           </li>
         
           <li>
-            <a href="/2015/08/14/我是要成为海贼王的男人/">我是要成为海贼王的男人</a>
-          </li>
-        
-          <li>
-            <a href="/2015/08/14/first-post/">first post</a>
+            <a href="/2015/08/14/first-post/">Tree 算法题总结</a>
           </li>
         
           <li>
