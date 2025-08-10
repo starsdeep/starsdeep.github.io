@@ -1,0 +1,25 @@
+project:
+  type: website
+
+website:
+  title: "Yikang Liao"
+  site-url: https://starsdeep.github.io/
+  description: "Yikang Liao's website"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com
+  margin-header: subscribe.html
+  
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+
+
+
