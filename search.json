@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "Hi, I’m a Machine Learning Engineer at Apple. My research interests lie in the areas of computer vision , deep learning and multimodal LLM. At Apple, I lead the development of core machine learning algorithms that power the first-generation gaze tracking for Apple Vision Pro and subsequent innovations that have achieved best-in-class performance in the field. I also directed the room layout estimation model of RoomPlan project, released at Apple WWDC 2022, which powers room scanning technologies used by many developers in the AR/VR space.\nI received my Master’s degree in Information Networking with a focus on machine learning from Carnegie Mellon University. Before that, I earned my Bachelor’s degree in Software Engineering from Zhejiang University. My advisor at Zhejiang University is Prof. Deng Cai and Prof. Haifeng Liu."
   },
   {
     "objectID": "posts/post-with-code/index.html",
